@@ -1,10 +1,35 @@
 //import 'bootstrap/dist/css/bootstrap.min.css';
 import "./style.css";
 import { Header } from "./header/header";
+import { Container } from "./container/container";
+import { Main } from "./main/main";
+import { Greeting } from "./greeting/greeting";
+import { Footer } from "./footer/footer";
+import { appHistory } from "./app-history";
 
-const wrapper = document.createElement("div");
-wrapper.className = "container d-flex flex-column shadow-sm bg-white";
+const container = new Container().render();
+document.body.appendChild(container);
 const header = new Header();
-wrapper.appendChild(header.render());
+container.appendChild(header.render());
+const main = new Main().render();
+container.appendChild(main);
+const footer = new Footer();
+container.appendChild(footer.render());
 
-document.body.appendChild(wrapper);
+function renderRoute(location) {
+    if(location.pathname==="/"){
+        main.innerHTML = "";
+        const greeting = new Greeting();
+        main.appendChild(greeting.render());
+    }
+    if(location.hash==="#list"){
+        main.innerHTML = "";
+    }  
+}
+
+appHistory.listen((listener) => {
+    console.log(listener.location);
+    renderRoute(listener.location);
+});
+
+renderRoute(appHistory.location);
