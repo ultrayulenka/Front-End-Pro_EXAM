@@ -14,8 +14,12 @@ export class Header extends BaseUiComponent {
     onClick(event) {
         event.preventDefault();
         const { href } = event.target;
-        if(!appHistory.location.hash){
+        appHistory.push({
+            pathname: href,
+            hash:''
+        });
+        /*if(!appHistory.location.hash){
             appHistory.push({pathname: href});
-        }
+        }*/
     }
 }
