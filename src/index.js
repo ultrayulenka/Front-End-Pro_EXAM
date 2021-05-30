@@ -43,6 +43,19 @@ const movies = JSON.parse(localStorage.getItem("movies"));
         main.appendChild(moviePage.render());
 
     }
+    if(location.hash==="#search"){
+        main.innerHTML = "";
+        const input = document.querySelector("#search input");
+        const result = movies.filter(movie => movie.title.toLowerCase().includes(input.value.toLowerCase()));
+        if(result.length>0) {
+            const movie = result.map(movie => new MovieCard(movie));
+            movie.forEach(card => main.appendChild(card.render()));
+        } else { 
+            alert("По вашему запросу ничего не найдено");
+            const greeting = new Greeting();
+            main.appendChild(greeting.render());
+        } 
+    }  
 }
 
 

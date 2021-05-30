@@ -9,6 +9,9 @@ export class Header extends BaseUiComponent {
         links.forEach((link) => {
             link.addEventListener("click", this.onClick.bind(this));
         });
+
+        const search = this._element.querySelector("#search");
+        search.addEventListener("submit", this.onSearch.bind(this));
     }
 
     onClick(event) {
@@ -21,5 +24,12 @@ export class Header extends BaseUiComponent {
         /*if(!appHistory.location.hash){
             appHistory.push({pathname: href});
         }*/
+    }
+
+    onSearch(event){
+        event.preventDefault();
+        appHistory.push({
+            hash:'#search'
+        })
     }
 }
