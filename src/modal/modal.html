@@ -1,0 +1,82 @@
+<div id="modal" class="modal fade" role="dialog">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Добавить новый фильм</h5>
+        <button type="button" id="close" class="close" data-bs-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="modalData" class="w-75 mx-auto">
+          <div class="form-group">
+            <label>Название фильма:</label>
+            <input id="title" type="text" class="form-control">
+            <input id="movieId" type="hidden" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Оригинальное название фильма:</label>
+            <input id="origin_title" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Постер:</label>
+            <input id="image" type="text" class="form-control" placeholder="URL">
+          </div>
+          <fieldset class="form-group" id="add-field">
+            <legend class="col-form-label pt-0">Детальная информация:</legend>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Год:</label>
+              <div class="col-sm-10">
+                <input id="year" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Страна:</label>
+              <div class="col-sm-10">
+                <input id="country" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Слоган:</label>
+              <div class="col-sm-10">
+                <input id="tagline" type="text" class="form-control">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label class="col-sm-2 col-form-label">Режиссер:</label>
+              <div class="col-sm-8">
+                <input id="producer" type="text" class="form-control">
+              </div>
+              <div class="col-sm-2">
+                <button id="btn-add-field" class="btn btn-primary btn-add-field" type="button"><svg
+                    class="octicon octicon-plus" viewBox="0 0 12 16" version="1.1" width="12" height="16"
+                    aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 9H7v5H5V9H0V7h5V2h2v5h5v2z"></path>
+                  </svg></button>
+              </div>
+            </div>
+
+          </fieldset>
+          <div class="form-group">
+            <label>В ролях:</label>
+            <textarea id="actors" class="form-control" rows="3"></textarea>
+            <small class="form-text text-muted">Укажите актеров через запятую.</small>
+          </div>
+          <div class="form-group">
+            <label>Рейтинг IMDB:</label>
+            <input id="rating" type="text" class="form-control">
+          </div>
+          <div class="form-group">
+            <label>Описание:</label>
+            <textarea id="description" class="form-control" rows="3"></textarea>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" id="close" class="btn btn-outline-danger closed" data-id="close"
+          data-bs-dismiss="modal">Отменить</button>
+        <button type="button" class="btn btn-primary mr-3 save">Сохранить</button>
+      </div>
+    </div>
+  </div>
+</div>

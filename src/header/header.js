@@ -1,6 +1,12 @@
-import { BaseUiComponent } from "../base-ui-component";
 import html from "./header.html";
+import { BaseUiComponent } from "../base-ui-component";
+import "bootstrap";
 import { appHistory } from "../app-history";
+import { Modal } from "../modal/modal";
+
+
+//global.jQuery = global.$ = $;
+window.bootstrap = require('bootstrap/dist/js/bootstrap.bundle.js');
 
 export class Header extends BaseUiComponent {
     constructor() {
@@ -12,6 +18,9 @@ export class Header extends BaseUiComponent {
 
         const search = this._element.querySelector("#search");
         search.addEventListener("submit", this.onSearch.bind(this));
+
+        const addButton = this._element.querySelector("#add-new");
+        addButton.addEventListener("click", this.onAddNew.bind(this));
     }
 
     onClick(event) {
@@ -19,11 +28,8 @@ export class Header extends BaseUiComponent {
         const { href } = event.target;
         appHistory.push({
             pathname: href,
-            hash:''
+            hash:'',
         });
-        /*if(!appHistory.location.hash){
-            appHistory.push({pathname: href});
-        }*/
     }
 
     onSearch(event){
@@ -31,5 +37,12 @@ export class Header extends BaseUiComponent {
         appHistory.push({
             hash:'#search'
         })
+    }
+
+    onAddNew(event){
+      event.preventDefault();
+      const modal = new Modal();
+      document.body.appendChild(modal.render());
+      modal.activate();
     }
 }

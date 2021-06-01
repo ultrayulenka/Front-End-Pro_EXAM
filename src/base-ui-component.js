@@ -1,6 +1,6 @@
 import template from "lodash.template";
 
-function renderTemplate(html, data) {
+export function renderTemplate(html, data) {
     const tmpl = template(html);
     const string = tmpl(data);
 

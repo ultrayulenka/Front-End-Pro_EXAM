@@ -1,4 +1,6 @@
-//import 'bootstrap/dist/css/bootstrap.min.css';
+import "jquery";
+import "popper.js";
+import "bootstrap";
 import "./style.css";
 import { Header } from "./header/header";
 import { Container } from "./container/container";
@@ -51,10 +53,10 @@ const movies = JSON.parse(localStorage.getItem("movies"));
             const movie = result.map(movie => new MovieCard(movie));
             movie.forEach(card => main.appendChild(card.render()));
         } else { 
-            alert("По вашему запросу ничего не найдено");
-            const greeting = new Greeting();
-            main.appendChild(greeting.render());
-        } 
+            const paragraph = document.createElement("p");
+            paragraph.innerText = "Ничего не найдено";
+            main.appendChild(paragraph);
+        }
     }  
 }
 
