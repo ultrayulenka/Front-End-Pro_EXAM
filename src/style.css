@@ -60,3 +60,8 @@ header {
   .btn-remove-field:hover svg{
     fill: #ffffff;
   }
+
+.not-found{
+  padding-top: 20vh;
+
+}

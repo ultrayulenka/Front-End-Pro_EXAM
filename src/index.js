@@ -1,6 +1,3 @@
-import "jquery";
-import "popper.js";
-import "bootstrap";
 import "./style.css";
 import { Header } from "./header/header";
 import { Container } from "./container/container";
@@ -26,27 +23,19 @@ if (!localStorage.getItem("movies")) {
 }
 
 function renderRoute(location) {
-const movies = JSON.parse(localStorage.getItem("movies"));
-
-    if(location.pathname==="/"){
-        main.innerHTML = "";
+    const movies = JSON.parse(localStorage.getItem("movies"));
+    main.innerHTML = "";
+    if(location.hash===''){
         const greeting = new Greeting();
         main.appendChild(greeting.render());
-    }
-    if(location.hash==="#list"){
-        main.innerHTML = "";
+    } else if(location.hash==="#list"){
         const movie = movies.map(movie => new MovieCard(movie));
         movie.forEach(card => main.appendChild(card.render()));
-    }  
-    if(location.hash===`#list-${movies.find(movie => movie.id === location.hash.slice(6))?.id}`){
-        main.innerHTML = "";
+    }  else if(location.hash===`#list-${movies.find(movie => movie.id === location.hash.slice(6))?.id}`){
         const movie = movies.find(movie => movie.id === location.hash.slice(6));
         const moviePage = new MoviePage(movie);
         main.appendChild(moviePage.render());
-
-    }
-    if(location.hash==="#search"){
-        main.innerHTML = "";
+    } else if(location.hash==="#search"){
         const input = document.querySelector("#search input");
         const result = movies.filter(movie => movie.title.toLowerCase().includes(input.value.toLowerCase()));
         if(result.length>0) {
@@ -54,10 +43,16 @@ const movies = JSON.parse(localStorage.getItem("movies"));
             movie.forEach(card => main.appendChild(card.render()));
         } else { 
             const paragraph = document.createElement("p");
-            paragraph.innerText = "Ничего не найдено";
+            paragraph.innerText = "По вашему запросу ничего не найдено";
+            paragraph.className = "not-found";
             main.appendChild(paragraph);
         }
-    }  
+    } else {
+        const paragraph = document.createElement("p");
+        paragraph.innerText = "По вашему запросу ничего не найдено";
+        paragraph.className = "mb-4 lead not-found";
+        main.appendChild(paragraph);
+    }
 }
 
 

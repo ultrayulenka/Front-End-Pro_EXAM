@@ -1,0 +1,108 @@
+[
+  {
+     "id":"b8379860-8e84-45da-bd14-e476586ac1c8",
+     "like":12,
+     "dislike":6,
+     "title":"Начало",
+     "origin":"Inception",
+     "year":"2010",
+     "country":"США, Великобритания",
+     "tagline":"\"Твой разум - место преступления\"",
+     "producer":"Кристофер Нолан",
+     "actors":[
+        "Леонардо Ди Каприо",
+        "Кэн Ватанабэ",
+        "Джозеф Гордон-Левитт",
+        "Эллен Пейдж",
+        "Марион Котийяр",
+        "Том Харди",
+        "Киллиан Мёрфи",
+        "Том Беренджер",
+        "Дилип Рао",
+        "Майкл Кейн"
+     ],
+     "rating":"IMDb: 8.80",
+     "description":"Сюжет картины рассказывает о ворах, способных украсть идею прямо у человека из подсознания. Одним из таких является главный герой фильма Доминик Кобб. ",
+     "image":"https://upload.wikimedia.org/wikipedia/ru/b/bc/Poster_Inception_film_2010.jpg",
+     "additionalPositions":[
+        {
+           "продюсер":"Эмма Томас"
+        },
+        {
+           "композитор":"Ханс Циммер"
+        }
+     ]
+  },
+  {
+     "id":"865ef14c-95e6-407c-9c22-ace1b4a131a7",
+     "like":0,
+     "dislike":0,
+     "title":"Три билборда на границе Эббинга, Миссури",
+     "origin":"Three Billboards Outside Ebbing, Missouri",
+     "year":"2017",
+     "country":"США, Великобритания",
+     "tagline":"«Одна в поле воин»",
+     "producer":"Мартин Макдонах",
+     "actors":[
+        "Фрэнсис Макдорманд",
+        "Вуди Харрельсон",
+        "Сэм Рокуэлл"
+     ],
+     "rating":"IMDb: 8.10",
+     "description":"Не в силах больше ждать результатов зашедшего в тупик расследования убийства дочери Милдред Хейс арендует три билборда, и размещает там несколько фраз, резко критикующих местного шефа полиции.",
+     "image":"https://upload.wikimedia.org/wikipedia/ru/7/75/Three_Billboards_Outside_Ebbing%2C_Missouri.jpg",
+     "additionalPositions":[
+        {
+           "продюсер":"Грэм Бродбент "
+        }
+     ]
+  },
+  {
+     "id":"2ddb48db-42bc-4d0d-acae-1709cb696ed9",
+     "like":10,
+     "dislike":2,
+     "title":"Большой Лебовски",
+     "origin":"The Big Lebowski",
+     "year":"1998",
+     "country":"США",
+     "tagline":"«It takes guys as simple as the Dude and Walter to make a story this complicated... and they'd really rather be bowling»",
+     "producer":"Братья Коэн",
+     "actors":[
+        "Джефф Бриджес",
+        "Джон Гудмен"
+     ],
+     "rating":"IMDb: 8.10",
+     "description":"Джефф «Чувак» Лебовски, которого ошибочно принимают за миллионера с таким же именем, требует возмещения ущерба за свой испорченный коврик и привлекает к этому своих приятелей по боулингу.",
+     "image":"https://www.film.ru/sites/default/files/movies/posters/poster5_2.jpg",
+     "additionalPositions":[
+        
+     ]
+  },
+  {
+     "id":"a65183a9-cae9-4f38-be91-7efddced5558",
+     "like":0,
+     "dislike":0,
+     "title":"Отель «Гранд Будапешт»",
+     "origin":"The Grand Budapest Hotel",
+     "year":"2014",
+     "country":"США, Германия",
+     "tagline":"-",
+     "producer":"Уэс Андерсон",
+     "actors":[
+        "Рэйф Файнс",
+        "Тони Револори",
+        "Сирша Ронан",
+        "Тильда Суинтон",
+        "Эдриен Броуди",
+        "Уиллем Дефо"
+     ],
+     "rating":"IMDb: 8.10",
+     "description":"Писатель встречает владельца стареющего высококлассного отеля, который рассказывает ему о своих ранних годах работы в вестибюле в славные годы отеля с исключительным консьержем.",
+     "image":"https://upload.wikimedia.org/wikipedia/ru/thumb/f/f5/The_Grand_Budapest_Hotel.jpg/421px-The_Grand_Budapest_Hotel.jpg",
+     "additionalPositions":[
+        {
+           "композитор":"Александр Деспла"
+        }
+     ]
+  }
+]
